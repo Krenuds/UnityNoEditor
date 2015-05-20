@@ -3,10 +3,14 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 	int sceneId = 0;
+	Room myRoom;
+	
 
 	// Use this for initialization
 	void Start () {
+		myRoom = new Room (10, 10, 10, Vector3.zero);
 			SetupLevel ();
+		myRoom.DisplayRoomInfo ();
 	    
 	}
 	
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour {
 	{
 		return "_" + sceneId + " " + item;
 		sceneId ++;
+
 	}
 }
 
